@@ -1,0 +1,43 @@
+{
+  "name": "type-blog",
+  "version": "1.0.0",
+  "description": "REST API with nodejs express sequelize and Typescript",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "build": "tsc",
+    "babel": "babel src/index.ts --out-file dist/bundles.js",
+    "start": "nodemon dist/src/index.js",
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GolgothaAksanti/type-blog.git"
+  },
+  "keywords": [],
+  "author": "Golgotha Aksanti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GolgothaAksanti/type-blog/issues"
+  },
+  "homepage": "https://github.com/GolgothaAksanti/type-blog#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "ts-node-dev": "^1.1.7",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.29.0"
+  }
+}
